@@ -1,0 +1,86 @@
+{
+  "tanks": [
+    "洗槽1",
+    "洗槽2",
+    "洗槽3"
+  ],
+  "waterBatches": [
+    {
+      "code": "WB-0901",
+      "source": "井水过滤",
+      "expiry": "2026-09-10"
+    },
+    {
+      "code": "WB-0920",
+      "source": "山泉沉淀",
+      "expiry": "2026-09-25"
+    },
+    {
+      "code": "WB-0922",
+      "source": "井水过滤",
+      "expiry": "2026-10-01"
+    }
+  ],
+  "washes": [
+    {
+      "id": "W-1001",
+      "requestId": "seed-1001",
+      "negativeCode": "CN-001",
+      "tank": "洗槽1",
+      "waterBatch": "WB-0920",
+      "waterSource": "山泉沉淀",
+      "conductivity": 612,
+      "silverIon": 0.18,
+      "filterNo": "F-07",
+      "operator": "老周",
+      "status": "洗片中",
+      "reasons": [],
+      "startedAt": "2026-09-22T09:10:00+08:00",
+      "endedAt": null,
+      "change": null,
+      "samples": [],
+      "releasedAt": null,
+      "releaseOperator": null,
+      "versions": [],
+      "history": [
+        {
+          "at": "2026-09-22T09:10:00+08:00",
+          "action": "开洗",
+          "note": "占用洗槽1，滤芯 F-07"
+        }
+      ]
+    },
+    {
+      "id": "W-1002",
+      "requestId": "seed-1002",
+      "negativeCode": "CN-002",
+      "tank": null,
+      "waterBatch": "WB-0901",
+      "waterSource": "井水过滤",
+      "conductivity": 540,
+      "silverIon": 0.62,
+      "filterNo": "F-08",
+      "operator": "阿敏",
+      "status": "待换水",
+      "reasons": [
+        "水批已过期（WB-0901 到期 2026-09-10）",
+        "银离子 0.62 高于 0.5 mg/L"
+      ],
+      "startedAt": "2026-09-22T09:22:00+08:00",
+      "endedAt": null,
+      "change": null,
+      "samples": [],
+      "releasedAt": null,
+      "releaseOperator": null,
+      "versions": [],
+      "history": [
+        {
+          "at": "2026-09-22T09:22:00+08:00",
+          "action": "开洗",
+          "note": "判定不通过，转待换水，未占洗槽"
+        }
+      ]
+    }
+  ],
+  "results": {}
+}
